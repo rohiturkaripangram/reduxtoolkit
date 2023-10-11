@@ -18,6 +18,7 @@ module.exports = {
         'hero-offer-bg':"#94A684",
         'button-bg':"#FF9494",
         'adtc':"#FF8080",
+        "profiletext":"#555"
         
       },
     },

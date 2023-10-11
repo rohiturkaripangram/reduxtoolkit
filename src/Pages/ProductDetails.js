@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {useSelector} from "react-redux"
 import { useDispatch } from "react-redux";
-import { addItem } from "../utils/cartSlice";
+import { addItem } from "../Store/cartSlice";
 
 const ProductDetails = ({serverData={serverData}}) => {
   const { productId } = useParams();

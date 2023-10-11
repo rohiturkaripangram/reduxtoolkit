@@ -5,8 +5,8 @@ import { AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
 import { BiWinkSmile } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { removeItem, clearCart } from "../utils/cartSlice";
-import { addwishlistItem } from "../utils/wishlistSlice";
+import { removeItem, clearCart } from "../Store/cartSlice";
+import { addwishlistItem } from "../Store/wishlistSlice";
 
 
 export default function Cart() {

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { BiWinkSmile } from "react-icons/bi";
 import {useSelector} from "react-redux"
 import { useDispatch } from 'react-redux';
-import { removeItem } from '../utils/cartSlice';
+import { removeItem } from '../Store/cartSlice';
 
 const CoupenValues = [
   {

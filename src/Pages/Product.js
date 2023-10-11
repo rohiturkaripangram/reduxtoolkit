@@ -3,8 +3,8 @@ import { ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { addItem } from "../utils/cartSlice";
-import { addwishlistItem, removewishlistItem } from "../utils/wishlistSlice";
+import { addItem } from "../Store/cartSlice";
+import { addwishlistItem, removewishlistItem } from "../Store/wishlistSlice";
 import { useSelector } from "react-redux";
 
 export default function Product({ serverData }) {

@@ -3,8 +3,8 @@ import { AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import {useSelector} from "react-redux"
 import { useDispatch } from "react-redux";
-import { removewishlistItem } from "../utils/wishlistSlice";
-import { addItem } from "../utils/cartSlice";
+import { removewishlistItem } from "../Store/wishlistSlice";
+import { addItem } from "../Store/cartSlice";
 
 const WishList = () => {
  
