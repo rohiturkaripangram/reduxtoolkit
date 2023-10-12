@@ -7,6 +7,9 @@ import { BiWinkSmile } from "react-icons/bi";
 import {useSelector} from "react-redux"
 import { useDispatch } from 'react-redux';
 import { removeItem } from '../Store/cartSlice';
+import {loadStripe} from '@stripe/stripe-js';
+import {publishableKey} from "../index"
+import redirectToCheckout from '@stripe/stripe-js';
 
 const CoupenValues = [
   {
@@ -27,6 +30,7 @@ export default function Checkout() {
   const dispatch=useDispatch()
 
   const cartItems=useSelector((store)=>store.cart.items)
+  
   const handleSubmit = (e) => {
     e.preventDefault()
     if (coupen !== '' && coupen != 0) {
@@ -49,6 +53,44 @@ export default function Checkout() {
     }
 
   }
+
+
+  const handlePayment = async () => {
+    try {
+      const stripe = await loadStripe(`${publishableKey}`);
+      const body = {
+        products: cartItems,
+      };
+      const headers = {
+        "Content-Type": "application/json",
+      };
+      const response = await fetch("http://localhost:3001/api/create-checkout-session", {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(body),
+      });
+  
+      const session = await response.json();
+  
+      // Use `redirectToCheckout` from the Stripe object
+      const { error } = await stripe.redirectToCheckout({
+        sessionId: session.sessionId, // Use correct property name
+      });
+  
+      if (error) {
+        console.error(error);
+        alert("Error redirecting to checkout");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("An unexpected error occurred");
+    }
+  };
+  
+
+
+
+
 
   return (
     <>
@@ -289,6 +331,7 @@ export default function Checkout() {
                             <button
                               type="button"
                               className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                               onClick={handlePayment}
                             >
                               Make payment
                             </button>
