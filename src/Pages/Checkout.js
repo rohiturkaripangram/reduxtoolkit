@@ -72,9 +72,9 @@ export default function Checkout() {
   
       const session = await response.json();
   
-      // Use `redirectToCheckout` from the Stripe object
+      
       const { error } = await stripe.redirectToCheckout({
-        sessionId: session.sessionId, // Use correct property name
+        sessionId: session.sessionId, 
       });
   
       if (error) {

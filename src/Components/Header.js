@@ -7,16 +7,6 @@ import { useSelector } from "react-redux";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const menuItems = [
-  {
-    name: "Home",
-  },
-
-  {
-    name: "Product",
-  },
-];
-
 export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -33,7 +23,6 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  
   return (
     <div className="relative w-full bg-white  ">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-6 lg:px-5">
@@ -45,25 +34,32 @@ export default function Header() {
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
-            {menuItems.map((item) => (
-              <li key={item.name}>
-                {item.name === "Product" ? (
-                  <NavLink
-                    to="/product"
-                    className="text-1xl font-semibold text-gray-800 hover:text-gray-900 "
-                  >
-                    {item.name}
-                  </NavLink>
-                ) : (
-                  <NavLink
-                    to="/"
-                    className="text-1xl font-semibold text-gray-800 hover:text-gray-900 "
-                  >
-                    {item.name}
-                  </NavLink>
-                )}
-              </li>
-            ))}
+            <li>
+              <NavLink
+                to="/"
+                className="text-1xl font-semibold text-gray-800 hover:text-gray-900 "
+              >
+                Home
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/product"
+                className="text-1xl font-semibold text-gray-800 hover:text-gray-900 "
+              >
+                Product
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/pricing"
+                className="text-1xl font-semibold text-gray-800 hover:text-gray-900 "
+              >
+                Pricing
+              </NavLink>
+            </li>
           </ul>
         </div>
 
@@ -101,9 +97,10 @@ export default function Header() {
               </NavLink>
             ) : (
               <NavLink
-               
                 className="text-md bg-adtc  px-3 py-2 text-sm rounded-md font-semibold text-white cursor-pointer mt-[-0.5rem] "
-                onClick={()=>{loginWithRedirect();}}
+                onClick={() => {
+                  loginWithRedirect();
+                }}
               >
                 Sign in
               </NavLink>
@@ -138,25 +135,32 @@ export default function Header() {
                 </div>
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
-                    {menuItems.map((item) => (
-                      <div key={item.name}>
-                        {item.name === "Product" ? (
-                          <NavLink
-                            to="/product"
-                            className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50 "
-                          >
-                            {item.name}
-                          </NavLink>
-                        ) : (
-                          <NavLink
-                            to="/"
-                            className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </NavLink>
-                        )}
-                      </div>
-                    ))}
+                    <li>
+                      <NavLink
+                        to="/"
+                        className="text-1xl font-semibold text-gray-800 hover:text-gray-900 "
+                      >
+                        Home
+                      </NavLink>
+                    </li>
+
+                    <li>
+                      <NavLink
+                        to="/product"
+                        className="text-1xl font-semibold text-gray-800 hover:text-gray-900 "
+                      >
+                        Product
+                      </NavLink>
+                    </li>
+
+                    <li>
+                      <NavLink
+                        to="/pricing"
+                        className="text-1xl font-semibold text-gray-800 hover:text-gray-900 "
+                      >
+                        Pricing
+                      </NavLink>
+                    </li>
                   </nav>
 
                   <div>
