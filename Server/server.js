@@ -4,7 +4,7 @@ const express = require("express");
 const server = express();
 const cors = require("cors");
 const secretKeyStripe = process.env.REACT_APP_PAYMENT_STRIPE_SECRET_KEY;
-const stripe = require("stripe")("sk_test_51O00udSCa2WGUUlJugyUX3c0G4AHyEbuIMBQA0G5ZQ4HEWxBOTObNd6aEzKyEDCKJIBuYxoQ9HL0QNCc0tWJYYQW004BDd3eJP");
+const stripe = require("stripe")(`${secretKeyStripe}`);
 
 
 server.use(express.json());
