@@ -23,6 +23,10 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLogin=()=>{
+      loginWithRedirect();
+    
+  }
   return (
     <div className="relative w-full bg-white  ">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-6 lg:px-5">
@@ -98,9 +102,7 @@ export default function Header() {
             ) : (
               <NavLink
                 className="text-md bg-adtc  px-3 py-2 text-sm rounded-md font-semibold text-white cursor-pointer mt-[-0.5rem] "
-                onClick={() => {
-                  loginWithRedirect();
-                }}
+                onClick={handleLogin}
               >
                 Sign in
               </NavLink>

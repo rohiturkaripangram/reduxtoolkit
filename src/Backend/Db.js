@@ -18,7 +18,7 @@ export const fakeFetch = (url) => {
                       "https://res.cloudinary.com/dgzehngjw/image/upload/v1651056979/evolt-ecommerce/p11_mbade4.jpg",
                     description:
                       "Bose QuietComfort Noise Cancelling Earbuds - True Wireless Earbuds, Bluetooth in-Ear Headphones, The World's Most Effective Noise Cancelling Earbuds",
-                    price: 5.00,
+                    price: 500.00,
                    
                     inStock: true,
                     discount: 30,
@@ -36,7 +36,7 @@ export const fakeFetch = (url) => {
                         "https://res.cloudinary.com/dgzehngjw/image/upload/v1651057006/evolt-ecommerce/p17_z6inbi.jpg",
                       description:
                         "Sony SRS-XB13 Wireless Extra Bass Portable Compact Bluetooth Speaker with 16 Hours Battery Life, Type-C, IP67 Waterproof.",
-                      price: 4.00,
+                      price: 400.00,
                      
                       inStock: true,
                       discount: 20,
@@ -54,7 +54,7 @@ export const fakeFetch = (url) => {
                         "https://res.cloudinary.com/dgzehngjw/image/upload/v1651056511/evolt-ecommerce/p5_bxkrft.jpg",
                       description:
                         "Sony WH-CH510, On-Ear Headphones, up-to 35Hrs Playtime, Lightweight, Type-C, Play/Pause Control, 30mm Driver, Blue",
-                      price: 29.00,
+                      price: 2900.00,
                       
                       inStock: false,
                       discount: 15,
@@ -72,7 +72,7 @@ export const fakeFetch = (url) => {
                         "https://res.cloudinary.com/dgzehngjw/image/upload/v1651056511/evolt-ecommerce/p4_gsyfsc.jpg",
                       description:
                         "JBL Charge 4, Wireless Portable Bluetooth Speaker, 7500mAh Built-in Powerbank, AUX & Type C (Without Mic, Black)",
-                      price: 25.00,
+                      price: 2500.00,
                       
                       inStock: true,
                       discount: 10,
@@ -91,7 +91,7 @@ export const fakeFetch = (url) => {
                         "https://res.cloudinary.com/dgzehngjw/image/upload/v1651057003/evolt-ecommerce/p16_qmllyb.jpg",
                       description:
                         "Bose QuietComfort 35 II Noise Cancelling Bluetooth Headphones— Wireless, Over Ear Headphones with Built in Microphone and Alexa Voice Control, Black",
-                      price: 49.00,
+                      price: 4900.00,
                       
                       inStock: true,
                       discount: 25,
@@ -111,7 +111,7 @@ export const fakeFetch = (url) => {
                         "https://res.cloudinary.com/dgzehngjw/image/upload/v1651056668/evolt-ecommerce/p6_xx3wxy.jpg",
                       description:
                         "Bose SoundSport 761529 Bluetooth Wireless In Ear Earphones With Microphone Black",
-                      price: 5.00,
+                      price: 500.00,
                      
                       inStock: true,
                       discount: 30,
