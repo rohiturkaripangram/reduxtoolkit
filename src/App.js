@@ -11,7 +11,7 @@ import Wishlist from "./Pages/Wishlist";
 import Product from "./Pages/Product";
 import ProductDetails from "./Pages/ProductDetails";
 import Profile from "./Pages/Profiie";
-import Pricing from "./Pages/Pricing";
+import PricingPage from "./Pages/Pricing";
 import { fakeFetch } from "./Backend/Db";
 import { useNavigate, useLocation } from "react-router-dom";
 import RequireAuth from "./utils/RequireAuth";
@@ -64,7 +64,7 @@ function App() {
             element={<ProductDetails serverData={serverData} />}
           />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/pricing" element={<Pricing/>}/>
+          <Route path="/pricing" element={<PricingPage/>}/>
         </Routes>
       </div>
     </Provider>
