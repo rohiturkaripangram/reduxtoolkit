@@ -29,8 +29,8 @@ server.post("/api/create-checkout-session", async (req, res) => {
         line_items: lineItems, 
         payment_method_types: ["card"],
         mode: "payment",
-        success_url: 'https://localhost:3001',
-        cancel_url: 'https://localhost:3001/product',
+        success_url: 'https://ecommercereduxtoolkit.netlify.app/',
+        cancel_url: 'https://ecommercereduxtoolkit.netlify.app/',
     });
 
     res.json({ sessionId: session.id });
