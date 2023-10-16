@@ -18,8 +18,14 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-      state.items.push(action.payload);
-      localStorage.setItem('cart', JSON.stringify(state.items));
+
+      if (!state.items.some(item => item.id === action.payload.id)) {
+        state.items.push(action.payload);
+        localStorage.setItem('cart', JSON.stringify(state.items));
+      } else{
+        alert("The Item is already present in the cart")
+      }
+    
       
     },
     removeItem: (state, action) => {
