@@ -1,11 +1,11 @@
 require('dotenv').config({ path: "../.env" });
 
 const express = require("express");
+const serverless = require('serverless-http');
 const server = express();
 const cors = require("cors");
 const secretKeyStripe = process.env.REACT_APP_PAYMENT_STRIPE_SECRET_KEY;
 const stripe = require("stripe")(`${secretKeyStripe}`);
-
 
 server.use(express.json());
 server.use(cors());
@@ -29,13 +29,12 @@ server.post("/api/create-checkout-session", async (req, res) => {
         line_items: lineItems, 
         payment_method_types: ["card"],
         mode: "payment",
-        success_url: 'https://ecommercereduxtoolkit.netlify.app/',
-        cancel_url: 'https://ecommercereduxtoolkit.netlify.app/',
+        success_url: 'https://reduxtoolkit-hazel.vercel.app/',
+        cancel_url: 'https://reduxtoolkit-hazel.vercel.app/',
     });
 
     res.json({ sessionId: session.id });
 });
 
-server.listen(3001, () => {
-    console.log("Server Start");
-});
+
+module.exports.handler = serverless(server);
