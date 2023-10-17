@@ -61,7 +61,7 @@ export default function Header() {
                 to="/pricing"
                 className="text-1xl font-semibold text-gray-800 hover:text-gray-900 "
               >
-                Pricing
+                Subcription
               </NavLink>
             </li>
           </ul>
